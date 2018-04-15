@@ -1,15 +1,21 @@
-Vue.component('task', {
-    template: '<li><slot></slot></li>'
-});
-
-Vue.component('column', {
-    template: '<li><slot>{{ message }}</slot></li>',
+Vue.component('task-list', {
+    template: '<div><task v-for="task in tasks">{{ task.task }}</task></div>',
 
     data(){
         return {
-            message: 'foobar'
+            tasks: [
+                {task: 'Go to church', complete: false},
+                {task: 'Go to the Store', complete: false},
+                {task: 'Cut up wood', complete: false},
+                {task: 'Finish Storage', complete: false}
+
+            ]
         };
     }
+});
+
+Vue.component('task', {
+    template: '<li><slot></slot></li>'
 });
 
 new Vue({

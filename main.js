@@ -29,6 +29,17 @@ Vue.component('message', {
             
 });
 
+Vue.component('my-modal', {
+    template: `
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class='modal-content'>
+
+        </div>
+        <button class="modal-close"></button>
+    </div>
+    `
+})
 
 new Vue({
     el: '#root'

@@ -1,3 +1,20 @@
+Vue.compenent('message', {
+    props: ['title', 'body']
+    template: '
+    <article class="message">
+            <div class="message-header"> 
+
+                {{ title }}
+            </div>
+            <div class="message-body"> 
+
+                {{ body }} 
+
+        </div></article>'
+
+            
+});
+
 Vue.component('task-list', {
     template: '<div><task v-for="task in tasks">{{ task.task }}</task></div>',
 

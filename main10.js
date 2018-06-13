@@ -9,10 +9,15 @@ Vue.component('modal', {
                 </p>
             </div>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+        <button class="modal-close" @click="$emit('close')"></button>
     </div>`
 });
+
 new Vue({
-    el: '#root'
+    el: '#root',
+
+    data: {
+        showModal:  false
+    }
 });
 
